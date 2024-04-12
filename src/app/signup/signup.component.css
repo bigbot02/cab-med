@@ -1,0 +1,89 @@
+.medical-form {
+    background-color: #f0f0f0;
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    border-radius: 10px;
+}
+
+.medical-form label {
+    font-weight: bold;
+    color: #3b7dd8;
+}
+
+.medical-form input[type="text"],
+.medical-form input[type="email"],
+.medical-form input[type="password"],
+.medical-form input[type="cin"],
+.medical-form input[type="number"],
+.medical-form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.medical-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.medical-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.medical-form button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #3b7dd8;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.medical-form button[type="cancel"] {
+    background-color: #e74c3c;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    width: 100px;
+    height: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.medical-form label.required::after {
+    content: "*";
+    color: red;
+}
+
+.medical-form label.required1::before {
+    content: "*";
+    color: red;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 20;
+    vertical-align: middle;
+    margin-right: 10px;
+    color: #3b7dd8;
+}

@@ -1,0 +1,96 @@
+<title>Medical Cabinet Management</title>
+<div id="sidebar">
+    <ul>
+        <li>
+            <a routerLink="/appointment"><span class="material-symbols-outlined">
+                    edit_note
+                </span>
+                Rendez-vous</a>
+        </li>
+        <li>
+            <a routerLink="/patient-records"><span class="material-symbols-outlined">
+                    patient_list
+                </span>
+                Dossiers des patients</a>
+        </li>
+        <li><a><span class="material-symbols-outlined">
+                    prescriptions
+                </span>
+                Ordonnances</a></li>
+        <li><a routerLink="/payment"><span class="material-symbols-outlined">
+                    payments
+                </span>
+                Facturation et paiement</a></li>
+        <li><a><span class="material-symbols-outlined">
+                    chat
+                </span>
+                Communication</a></li>
+        <li><a routerLink="/analytics">
+                <span class="material-symbols-outlined">
+                    monitoring
+                </span>
+                Analyses</a></li>
+    </ul>
+    <div class="fixed-button"><a routerLink="/profile">
+            <button>Profile</button></a>
+    </div>
+</div>
+<div id="topbar">
+    <img src="assets/image.png" alt="Logo">
+    <ul>
+
+        <li><a (click)="scrollTo('welcome')" class="link">Accueil</a></li>
+        <li><a (click)="scrollTo('cabinet')" class="link">Cabinet</a></li>
+        <li><a (click)="scrollTo('equipe')" class="link">Équipe</a></li>
+        <li><a (click)="scrollTo('contact')" class="link">Contact</a></li>
+        <li><a routerLink="/login" class="link0">Se déconnecter</a></li>
+    </ul>
+</div>
+<div id="content">
+    <header id="welcome">
+        <h1>Cabinet Médical Supmti</h1>
+        <h3>Ecouter | Préserver | Soigner</h3>
+    </header>
+
+    <main>
+        <section id="cabinet">
+            <h2>Présentation du cabinet</h2>
+            <p>
+                Le cabinet médical Supmti, situé à Oujda, offre une réponse complète à
+                tous vos besoins en matière de Médecine Générale. Notre équipe de professionnels dévoués est là pour
+                vous fournir des soins de qualité et personnalisés, dans un environnement accueillant et moderne.
+                Nous sommes là pour prendre soin de vous et de votre santé, avec un engagement total envers votre
+                bien-être
+            </p>
+            <button>En savoir plus sur notre cabinet</button>
+        </section>
+        <section>
+            <h2>Horaires du cabinet</h2>
+            <p>Le cabinet médical Supmti est un cabinet médical nouvellement créé par deux médecins francais, anciens
+                internes des Hospitaux de Marseille.</p>
+            <p>Dans l'objectif de répondre de façon optimale aux besoins des patients, le cabinet propose:</p>
+            <ul>
+                <li>Des consultations:</li> <br>
+                <ul>
+                    <li>de 08:30 à 18:30 du lundi au jeudi (en continu)</li>
+                    <li>de 08:30 à 12:30 et de 15:00 à 18:30 le vendredi</li>
+                    <li>de 08:30 à 14:00 le samedi</li>
+                </ul><br>
+                <li>Pour les visites à domicile sur rendez-vous, cliquez <a href="#">ici</a></li>
+            </ul>
+        </section>
+
+        <section id="equipe">
+            Equipe 01
+        </section>
+
+        <section id="contact">
+            Contact
+        </section>
+
+        <section>
+            Equipe 02
+        </section>
+
+    </main>
+</div>

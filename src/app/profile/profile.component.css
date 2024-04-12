@@ -1,0 +1,100 @@
+.profile-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Inter', sans-serif;
+}
+
+.profile-info {
+    display: block;
+    margin-top: 10px;
+}
+
+.profile-picture {
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-details {
+    margin-top: 10px;
+}
+
+.profile-name {
+    font-size: 15px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.profile-email {
+    font-size: 15px;
+    color: #000000;
+}
+
+h3 {
+    color: #d12828;
+    text-align: center;
+    font-size: 30px;
+}
+
+.profile-settings {
+    flex: 1;
+    margin-left: 20px;
+    font-size: 20px;
+}
+
+.profile-label {
+    margin-bottom: 50px;
+    color: #3b7dd8;
+}
+
+.form-control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.save {
+    width: 10%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.save:hover {
+    background-color: #0056b3;
+}
+
+.return {
+    width: 10%;
+    padding: 10px;
+    background-color: #d34949;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.return:hover {
+    background-color: #f12b2b;
+}

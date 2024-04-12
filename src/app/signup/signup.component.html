@@ -1,0 +1,151 @@
+<div class="logo-container">
+    <img src="assets\image.png" alt="Logo">
+</div>
+
+<form class="medical-form">
+    <div>
+        <label for="title" class="required">Title</label>
+        <select id="title" name="title" required>
+            <option value="mr">Mr.</option>
+            <option value="ms">Ms.</option>
+            <option value="mrs">Mrs.</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="firstName" class="required">First Name</label>
+        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+    </div>
+    <div>
+        <label for="lastName" class="required">Last Name</label>
+        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+    </div>
+    <div>
+        <label class="required">Username</label>
+        <input type="text" name="username" placeholder="Enter an unique username" required>
+    </div>
+    <div>
+        <label for="email" class="required">Email</label>
+        <input type="email" id="email" name="email" placeholder="e.g., example@exp.com" required>
+    </div>
+    <div>
+        <label for="cin" class="required">CIN</label>
+        <input type="cin" id="cin" name="cin" placeholder="e.g., A00000" required>
+    </div>
+    <div>
+        <label for="profession" class="required">I am a</label>
+        <select required id="profession" (change)="toggleFields($event)">
+            <option value="none">--</option>
+            <option value="doctor">Doctor</option>
+            <option value="patient">Patient</option>
+        </select>
+    </div>
+    <div id="doctorFields" class="hidden">
+        <label class="required">Medical License Number</label>
+        <input type="text" name="licenseNumber" placeholder="e.g., 12345-ABCDE" required>
+
+        <label class="required">Specialization</label>
+        <select type="text" name="specialization" required>
+            <option value="cardiology">Cardiology</option>
+            <option value="dermatology">Dermatology</option>
+            <option value="endocrinology">Endocrinology</option>
+            <option value="gastroenterology">Gastroenterology</option>
+            <option value="neurology">Neurology</option>
+            <option value="oncology">Oncology</option>
+            <option value="orthopedics">Orthopedics</option>
+            <option value="pediatrics">Pediatrics</option>
+            <option value="psychiatry">Psychiatry</option>
+            <option value="radiology">Radiology</option>
+            <option value="surgery">Surgery</option>
+            <option value="obstetrics_and_gynecology">Obstetrics and Gynecology</option>
+            <option value="urology">Urology</option>
+            <option value="anesthesiology">Anesthesiology</option>
+            <option value="ophthalmology">Ophthalmology</option>
+            <option value="allergy_and_immunology">Allergy and Immunology</option>
+            <option value="pulmonology">Pulmonology</option>
+            <option value="nephrology">Nephrology</option>
+            <option value="rheumatology">Rheumatology</option>
+            <option value="emergency_medicine">Emergency Medicine</option>
+        </select>
+
+        <label class="required">Clinic or Hospital Affiliation</label>
+        <input type="text" name="affiliation" required>
+
+        <label class="required">Years of Experience</label>
+        <input type="number" name="experience" placeholder="e.g., 10" required>
+    </div>
+
+    <div id="patientFields" class="hidden">
+        <label class="required">Insurance Information</label>
+        <input type="text" name="insuranceInfo">
+
+        <label class="required">Primary Care Physician</label>
+        <input type="text" name="primaryPhysician">
+
+        <label class="required">Medical History</label>
+        <textarea name="medicalHistory"></textarea>
+    </div>
+    <div>
+        <label for="city" class="required">City</label>
+        <select type="text" id="city" name="city">
+            <option value="Agadir">Agadir</option>
+            <option value="Al Hoceima">Al Hoceima</option>
+            <option value="Asilah">Asilah</option>
+            <option value="Azemmour">Azemmour</option>
+            <option value="Beni Mellal">Beni Mellal</option>
+            <option value="Berkane">Berkane</option>
+            <option value="Berrechid">Berrechid</option>
+            <option value="Casablanca">Casablanca</option>
+            <option value="Chefchaouen">Chefchaouen</option>
+            <option value="Dakhla">Dakhla</option>
+            <option value="El Jadida">El Jadida</option>
+            <option value="Essaouira">Essaouira</option>
+            <option value="Fes">Fes</option>
+            <option value="Fnideq">Fnideq</option>
+            <option value="Guelmim">Guelmim</option>
+            <option value="Ifrane">Ifrane</option>
+            <option value="Kénitra">Kénitra</option>
+            <option value="Khouribga">Khouribga</option>
+            <option value="Ksar El Kebir">Ksar El Kebir</option>
+            <option value="Laayoune">Laayoune</option>
+            <option value="Larache">Larache</option>
+            <option value="Marrakech">Marrakech</option>
+            <option value="Meknes">Meknes</option>
+            <option value="Mohammedia">Mohammedia</option>
+            <option value="Nador">Nador</option>
+            <option value="Ouarzazate">Ouarzazate</option>
+            <option value="Oujda">Oujda</option>
+            <option value="Rabat">Rabat</option>
+            <option value="Safi">Safi</option>
+            <option value="Salé">Salé</option>
+            <option value="Settat">Settat</option>
+            <option value="Sidi Kacem">Sidi Kacem</option>
+            <option value="Tangier">Tangier</option>
+            <option value="Taza">Taza</option>
+            <option value="Témara">Témara</option>
+            <option value="Tétouan">Tétouan</option>
+            <option value="Tiznit">Tiznit</option>
+            <option value="Zagora">Zagora</option>
+        </select>
+    </div>
+    <div>
+        <label for="password" class="required">Password</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+        <label for="confirmPassword" class="required">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+    </div>
+    <div>
+        <label>
+            <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
+            <label for="acceptTerms" class="required1">I agree to the Terms of Service.</label>
+        </label>
+    </div>
+    <div>
+        <input type="checkbox" id="policy" name="policy" required>
+        <label for="acceptTerms" class="required1">I accept the Privacy Policy.</label>
+    </div>
+    <button type="submit" routerLink="/login">Register</button>
+    <button type="cancel" routerLink="/login">Cancel</button>
+</form>
