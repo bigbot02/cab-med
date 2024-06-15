@@ -1,0 +1,228 @@
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://img.freepik.com/free-photo/flat-lay-medical-desk-arrangement-with-copy-space_23-2148502980.jpg?t=st=1718032187~exp=1718035787~hmac=5743a6b5a336940819b0b2e1a9b4df2ced141f7289f70c726bc15f43059c4fec&w=740');
+    height: 170vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1300px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    color: #000000;
+}
+
+th {
+    background-color: #3b7dd8;
+    color: rgb(255, 255, 255);
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.checkbox {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox .checkmark {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+}
+
+.checkbox input[type="checkbox"]:checked+.checkmark {
+    background-color: #0078d4;
+    border-color: #0078d4;
+}
+
+.checkbox input[type="checkbox"]:checked+.checkmark:after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.2s ease;
+    transform: scale(1);
+}
+
+.checkbox .checkmark:after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: transparent;
+    transform: scale(0);
+    transition: transform 0.2s ease;
+}
+
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    border: 2px solid #0071e2;
+    background-color: #0071e2;
+    border-radius: 0.9em;
+    padding: 0;
+    height: 40px;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 1em;
+}
+
+button:hover {
+    background-color: #24b4fb;
+    border-color: #24b4fb;
+}
+
+.cancel-button {
+    border-color: #e20000;
+    background-color: #e20000;
+}
+
+.cancel-button:hover {
+    background-color: #ff5a5a;
+    border-color: #ff5a5a;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers all items horizontally */
+}
+
+.wrapper {
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+    color: #000000;
+}
+
+.prescription-form {
+    text-align: left;
+}
+
+.image {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group0 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-group0 input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 10px;
+}
+
+.input-group {
+    display: contents;
+}
+
+
+
+.input-group textarea {
+    grid-column: 2;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+h5,
+h2 {
+    color: #000000;
+}

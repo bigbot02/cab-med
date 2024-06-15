@@ -1,0 +1,118 @@
+<div>
+    <nav class="main-menu">
+        <div class="logo-containers">
+            <a><img src="assets\m2.png" alt="Logo" class="logo"></a>
+        </div>
+        <div class="scrollbar" id="style-1">
+            <ul>
+                <li class="darkerlishadow">
+                    <a routerLink="/welcome">
+                        <span class="material-symbols-outlined">dashboard</span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <!--
+                <li class="darkerli">
+                    <a routerLink="/analytics">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="nav-text">Notifications</span>
+                    </a>
+                </li>-->
+
+                <li class="darkerli">
+                    <a routerLink="/appointment">
+                        <span class="material-symbols-outlined">edit_note</span>
+                        <span class="nav-text">Rendez-vous</span>
+                    </a>
+                </li>
+
+                <li class="darkerli">
+                    <a routerLink="/calendar">
+                        <span class="material-symbols-outlined">calendar_month</span>
+                        <span class="nav-text">Calandrier</span>
+                    </a>
+                </li>
+
+                <li class="darkerli">
+                    <a routerLink="/patient-records">
+                        <span class="material-symbols-outlined">patient_list</span>
+                        <span class="nav-text">Dossier Medicals</span>
+                    </a>
+                </li>
+
+                <li class="darkerli">
+                    <a routerLink="/payment">
+                        <span class="material-symbols-outlined">payment</span>
+                        <span class="nav-text">Facturation et paiment</span>
+                    </a>
+                </li>
+                <!--
+                <li class="darkerli">
+                    <a routerLink="/tasks">
+                        <span class="material-symbols-outlined">task_alt</span>
+                        <span class="nav-text">Taches</span>
+                    </a>
+                </li>-->
+                <li class="darkerli">
+                    <a routerLink="/guide">
+                        <span class="material-symbols-outlined">help</span>
+                        <span class="nav-text">Aide</span>
+                    </a>
+                </li>
+
+                <li class="darkerlishadowdown">
+                    <a routerLink="/profile">
+                        <span class="material-symbols-outlined">account_circle</span>
+                        <span class="nav-text">Compte</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+
+<div class="header-container">
+    <div class="logo-container">
+        <img src="assets\Logoo.png" alt="Logo">
+    </div>
+
+    <ul class="menu">
+
+        <li><a routerLink="/home" class="link"> <span class="material-symbols-outlined">
+                    home
+                </span></a></li>
+        <li class="dropdown">
+            <a class="button-default show-notifications js-show-notifications">
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+                <div class="notifications-count js-count"></div>
+            </a>
+            <ul class="dropdown-menu notifications js-notifications">
+                <li class="item no-data">You don't have notifications</li>
+                <!-- Notifications will be dynamically inserted here -->
+            </ul>
+        </li>
+        <!--
+        <li><a routerLink="/todolist" class="link"> <span class="material-symbols-outlined">
+                    task_alt
+                </span></a></li>
+        <li><a routerLink="/" class="link"> <span class="material-symbols-outlined">
+                    help
+                </span></a></li>
+        <li><a routerLink="/profile" class="link0"> <span class="material-symbols-outlined">
+                    account_circle
+                </span></a></li>
+                -->
+        <li><a routerLink="/login" class="link0">
+                <span class="material-symbols-outlined alone">
+                    logout
+                </span>
+            </a>
+        </li>
+    </ul>
+</div>

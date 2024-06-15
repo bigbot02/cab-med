@@ -1,174 +1,256 @@
-#sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 280px;
-    height: 100%;
-    background-color: #E5e7e6;
-    color: #fff;
-    padding-top: 20px;
-    font-family: 'Inter', sans-serif;
+body {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+    /*background-color: #37CDFF;*/
+    background-image: url('https://img.freepik.com/free-photo/flat-lay-medical-desk-arrangement-with-copy-space_23-2148502980.jpg?t=st=1718032187~exp=1718035787~hmac=5743a6b5a336940819b0b2e1a9b4df2ced141f7289f70c726bc15f43059c4fec&w=740');
+    background-size: cover;
+    background-position: center;
+    height: 1090px;
 }
 
-#sidebar img {
-    display: block;
-    margin: 20px auto;
-    max-width: 30%;
-    height: auto;
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: #000000;
 }
 
-#sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+table {
+    width: 100%;
+    table-layout: fixed;
 }
 
-#sidebar ul li {
-    padding: 10px;
-    cursor: pointer;
-}
-
-#sidebar ul li:hover {
-    background-color: #cccc;
-}
-
-#topbar {
-    background-color: #9ac8eb;
-    color: #000;
-    padding: 10px;
-    text-align: right;
-    font-family: 'Inter', sans-serif;
-}
-
-#topbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-}
-
-#topbar ul li {
-    display: inline;
+.tbl-container {
+    width: 95%;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
     margin-left: 70px;
 }
 
-#topbar ul li a {
-    text-decoration: none;
-    color: #000;
-    margin-left: 50px;
-}
-
-.content {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-left: 340px;
-    font-family: 'Inter', sans-serif;
-}
-
-.content h2 {
-    margin-top: 0;
-}
-
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-
-#sidebar ul li a {
-    color: #585858;
-    text-decoration: none;
-    display: block;
-    padding: 10px 20px;
-    border-bottom: 1px solid transparent;
-}
-
-#sidebar ul li a:hover {
-    background-color: #cccc;
-    border-color: #cccc;
-}
-
-.highlighted-item {
-    background-color: #fff;
-}
-
-.highlighted-item:hover {
-    background-color: #fff;
-    border-color: #fff;
-}
-
-.fixed-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 200px;
-}
-
-.fixed-button button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+.tbl-header {
+    background-color: #3b7dd8;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 15px;
+    text-align: center;
 }
 
-.fixed-button button:hover {
-    background-color: #45a049;
+.tbl-header th {
+    padding: 15px;
+    font-weight: normal;
+    border-bottom: 1px solid #ddd;
 }
 
-.table {
+.tbl-content {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.tbl-content table {
     width: 100%;
     border-collapse: collapse;
-    border-radius: 10px;
-    overflow: hidden;
 }
 
-.table th,
-.table td {
-    padding: 8px;
-    border-bottom: 1px solid #a09595;
-    text-align: left;
-    background-color: #d6d6d6;
+th {
+    padding: 20px 15px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 16px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Inter", sans-serif;
+
 }
 
-.table th {
-    background-color: #fc2929;
+.tbl-content td,
+.tbl-content th {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    color: #000000;
+    font-size: 15px;
+    font-weight: lighter;
 }
 
-.table tr:hover {
-    background-color: #f5f5f5;
+.tbl-content tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
-.filters {
+.tbl-content tr:hover {
+    background-color: #f1f1f1;
+}
+
+.tbl-content input[type="checkbox"] {
+    cursor: pointer;
+}
+
+
+section {
+    margin: 50px;
+}
+
+button {
+    border: 2px solid #0071e2;
+    background-color: #0071e2;
+    border-radius: 0.9em;
+    padding: 0;
+    height: 40px;
+    /* Set height to 40px */
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
 }
 
-.search-bar input[type="text"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 250px;
+button span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 1em;
+    /* Adjust padding to fit the 40px height */
 }
 
-.filter-dropdown select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: #fff;
+button:hover {
+    background-color: #24b4fb;
+    border: 2px solid #24b4fb;
+
+}
+
+.bin-button,
+.archive-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    /* Set width to 40px */
+    height: 40px;
+    /* Set height to 40px */
+    border-radius: 0.9em;
+    /* Adjust border-radius */
     cursor: pointer;
+    transition-duration: 0.3s;
+    border: 2px solid transparent;
+    /* Adjust border size */
+}
+
+.bin-button {
+    background-color: rgb(255, 95, 95);
+}
+
+.bin-button:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.bin-button:active {
+    transform: scale(0.9);
+}
+
+.bin-bottom,
+.archive-icon {
+    width: 20px;
+    /* Adjust icon size to fit within 40px */
+    height: 20px;
+    /* Adjust icon size to fit within 40px */
+}
+
+.bin-top {
+    width: 20px;
+    /* Adjust icon size */
+    transform-origin: right;
+    transition-duration: 0.3s;
+}
+
+.bin-button:hover .bin-top {
+    transform: rotate(45deg);
+}
+
+.archive-button {
+    background-color: rgb(119, 119, 122);
+}
+
+.archive-button:hover {
+    background-color: rgb(84, 84, 90);
+}
+
+.archive-button:active {
+    transform: scale(0.9);
+}
+
+.archive-icon {
+    transition: transform 0.3s;
+}
+
+.archive-button:hover .archive-icon {
+    transform: scale(1.1);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 10px;
+    margin-bottom: 30px;
+}
+
+.group {
+    display: flex;
+    line-height: 40px;
+    align-items: center;
+    position: relative;
+    max-width: 220px;
+    margin-left: 70px;
+    height: 40px;
+    margin-bottom: 30px;
+}
+
+.input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: 0.3s ease;
+}
+
+.input::placeholder {
+    color: #9e9ea7;
+}
+
+.input:focus,
+input:hover {
+    outline: none;
+    border-color: rgba(0, 48, 73, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgb(0 48 73 / 10%);
+}
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }

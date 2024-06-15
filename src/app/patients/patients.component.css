@@ -1,0 +1,134 @@
+body {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+    /*background-color: #37CDFF;*/
+    background-size: cover;
+    background-position: center;
+    /*background: #e2e2e2;*/
+    background-image: url('https://img.freepik.com/free-photo/flat-lay-medical-desk-arrangement-with-copy-space_23-2148502980.jpg?t=st=1718032187~exp=1718035787~hmac=5743a6b5a336940819b0b2e1a9b4df2ced141f7289f70c726bc15f43059c4fec&w=740');
+
+}
+
+.wrapper {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: black;
+}
+
+.head {
+    margin-top: 60px;
+}
+
+.prescription-form {
+    text-align: left;
+    font-family: "Inter", sans-serif;
+}
+
+.image {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 20%;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 27px;
+    color: #213ed3d9;
+}
+
+.dos {
+    font-weight: bold;
+    color: #083979;
+    font-family: "Inter", sans-serif;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group0 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.form-group0 input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.hide {
+    display: none;
+}
+
+button {
+    background: #083979;
+    margin-left: 20px;
+    position: left;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+}
+
+button:hover {
+    background: #1c54c4;
+}
+
+.addnew {
+    background: #418df1;
+    margin-left: 20px;
+    position: left;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 200px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.space {
+    padding: 50px;
+}

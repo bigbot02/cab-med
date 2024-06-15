@@ -1,31 +1,306 @@
-<div class="profile-container">
-    <div class="profile-info">
-        <div class="profile-picture">
-            <img src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"
-                alt="Profile Picture">
+<!--
+<body>
+    <header>
+        <h1>Profile</h1>
+    </header>
+    <div class="content">
+        <img class="profile-picture" src="assets/me.png" alt="Profile Picture">
+        <div class="personal-info">
+            <h2><span class="material-symbols-outlined">
+                    info
+                </span>Information Personnel</h2>
+            <div class="element-item">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="full-name"><span class="material-symbols-outlined">
+                                person
+                            </span>Nom Complet:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="full-name" value="ABID">
+                        <input type="text" id="full-name" value="Safae">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                    </div>
+                    <div class="table-cell">
+                        <div class="btn2">
+                            <button onclick="cancelChanges()" class="cancel">Cancel</button>
+                            <button onclick="saveChanges()" class="save">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="element-item alone">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="username"><span class="material-symbols-outlined">
+                                badge
+                            </span>Nom d'utilisateur:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="username" value="PinkyY">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                    </div>
+                    <div class="table-cell">
+                        <div class="btn3">
+                            <button onclick="cancelChanges()" class="cancel">Cancel</button>
+                            <button onclick="saveChanges()" class="save">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="element-item">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="city"><span class="material-symbols-outlined">
+                                alternate_email
+                            </span>Adresse1:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="city" value="Oujda">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="country"><span class="material-symbols-outlined">
+                                alternate_email
+                            </span>Adresse2:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="country" value="Morocco">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                    </div>
+                    <div class="table-cell">
+                        <div class="btn1">
+                            <button onclick="cancelChanges()" class="cancel">Cancel</button>
+                            <button onclick="saveChanges()" class="save">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="element-item alone">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="bio"><span class="material-symbols-outlined">
+                                description
+                            </span>Bio:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="bio" value="Description Personnel">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                    </div>
+                    <div class="table-cell">
+                        <div class="btn3">
+                            <button onclick="cancelChanges()" class="cancel">Cancel</button>
+                            <button onclick="saveChanges()" class="save">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="element-item alone">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="email"><span class="material-symbols-outlined">
+                                mail
+                            </span>Email:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="email" value="Abid0@example.com">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                    </div>
+                    <div class="table-cell">
+                        <div class="btn3">
+                            <button onclick="cancelChanges()" class="cancel">Cancel</button>
+                            <button onclick="saveChanges()" class="save">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="element-item1">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="city"><span class="material-symbols-outlined">
+                                alternate_email
+                            </span>Change Password:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="city" placeholder="CURRENT PASSWORD">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="country" placeholder="NEW PASSWORD">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="country" placeholder="COMFIRM NEW PASSWORD">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                    </div>
+                    <div class="table-cell">
+                        <div class="btn1">
+                            <button onclick="cancelChanges()" class="cancel">Cancel</button>
+                            <button onclick="saveChanges()" class="save">Save Changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="profile-details">
-            <h2 class="profile-name">Edogaru</h2>
-            <p class="profile-mail">edogaru&#64;mail.com.my</p>
+        <div class="activity">
+            <h2><span class="material-symbols-outlined">
+                    stack
+                </span>Recent Activity</h2>
+            <p>No recent activity.</p>
+        </div>
+        <div class="actions">
+            <button class="delete">Supprimer votre compte</button>
+            <button class="retour" routerLink="/welcome">Retour a la page d'acceuil</button>
         </div>
     </div>
+</body>
+-->
+<app-layout></app-layout>
 
-    <div class="profile-settings">
-        <h3>Profile Settings</h3>
-        <div class="profile-form">
-            <div>
-                <label for="firstName" class="profile-label">First Name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="header-background">
+                <img src="assets/cab.jpeg" alt="Header Background" class="header-background-image">
             </div>
-            <div>
-                <label for="lastName" class="profile-label">Last Name</label>
-                <input type="text" id="lastName" class="form-control" placeholder="Enter your last name">
+            <img src="assets/387569.png" alt="Profile Picture" class="profile-picture">
+        </div>
+
+        <div class="profile-details">
+            <h2>Information Personnel</h2>
+
+            <div class="element-item">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="full-name"><span class="material-symbols-outlined">
+                                badge
+                            </span>Nom Complet:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="full-name" value="ABID">
+                        <input type="text" id="full-name" value="Safae">
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="email" class="profile-label">Email</label>
-                <input type="email" id="email" class="form-control" placeholder="Enter your email">
+
+            <div class="element-item alone">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="username"><span class="material-symbols-outlined">
+                                person
+                            </span>Nom d'utilisateur:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="username" value="PinkyY">
+                    </div>
+                </div>
             </div>
-            <button type="submit" class="save">Save Profile</button>
-            <button type="button" class="return" routerLink="/welcome">Cancel</button>
+
+            <div class="element-item">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="city"><span class="material-symbols-outlined">
+                                home
+                            </span>Adresse1:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="city" value="Oujda">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="country"><span class="material-symbols-outlined">
+                                home
+                            </span>Adresse2:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="country" value="Morocco">
+                    </div>
+                </div>
+            </div>
+
+            <div class="element-item alone">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="bio"><span class="material-symbols-outlined">
+                                description
+                            </span>Bio:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="bio" value="Description Personnel">
+                    </div>
+                </div>
+            </div>
+
+            <div class="element-item alone">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="email"><span class="material-symbols-outlined">
+                                alternate_email
+                            </span>Email:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="email" value="Abid0@example.com">
+                    </div>
+                </div>
+            </div>
+
+            <div class="element-item1">
+                <div class="table-row">
+                    <div class="table-cell">
+                        <label for="city"><span class="material-symbols-outlined">
+                                lock
+                            </span>Change Password:</label>
+                    </div>
+                    <div class="table-cell">
+                        <input type="text" id="city" placeholder="CURRENT PASSWORD">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell"></div>
+                    <div class="table-cell">
+                        <input type="text" id="country" placeholder="NEW PASSWORD">
+                    </div>
+                </div>
+                <div class="table-row">
+                    <div class="table-cell"></div>
+                    <div class="table-cell">
+                        <input type="text" id="country" placeholder="CONFIRM NEW PASSWORD">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="profile-actions">
+            <button class="btn edit-btn">Sauvgarder mon profile</button>
+            <button class="btn delete-btn">Supprimer mon compte</button>
+            <button class="btn home-btn"><a routerLink="/welcome">Retourner au page d'acceuil</a></button>
         </div>
     </div>
+</body>

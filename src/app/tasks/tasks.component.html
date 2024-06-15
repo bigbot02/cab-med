@@ -1,0 +1,17 @@
+<body>
+    <app-layout></app-layout>
+
+    <div class="container">
+        <h2>Mes taches</h2>
+        <input type="text" class="input" [(ngModel)]="inputText" placeholder="Ajouter un nouveau task">
+        <button class="add" (click)="addTask()">Ajouter</button>
+        <div class="tasks">
+            <div *ngFor="let task of tasks" class="task" [class.done]="task.completed"
+                (click)="toggleTaskCompletion(task.id)">
+                {{ task.title }}
+                <span class="del" (click)="deleteTask(task.id)">Supprimer</span>
+            </div>
+        </div>
+        <button class="delete-all" (click)="clearAllTasks()">Supprimer tous</button>
+    </div>
+</body>

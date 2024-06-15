@@ -1,120 +1,79 @@
-#sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 280px;
-    height: 100%;
-    background-color: #E5e7e6;
-    color: #fff;
-    padding-top: 20px;
-    font-family: 'Inter', sans-serif;
+body {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+    /*background-color: #37CDFF;*/
+    background-image: url('https://img.freepik.com/free-photo/flat-lay-medical-desk-arrangement-with-copy-space_23-2148502980.jpg?t=st=1718032187~exp=1718035787~hmac=5743a6b5a336940819b0b2e1a9b4df2ced141f7289f70c726bc15f43059c4fec&w=740');
+    background-size: cover;
+    background-position: center;
+    height: 1090px;
 }
 
-#sidebar img {
-    display: block;
-    margin: 20px auto;
-    max-width: 30%;
-    height: auto;
+.box {
+    width: 1200px;
+    border-bottom: 20px solid #2c80da;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-left: 180px;
+    color: #000000;
+    margin-top: 50px;
 }
 
-#sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#sidebar ul li {
-    padding: 10px;
-    cursor: pointer;
-}
-
-#sidebar ul li:hover {
-    background-color: #cccc;
-}
-
-#topbar {
-    background-color: #9ac8eb;
-    color: #000;
-    padding: 10px;
-    text-align: right;
-    font-family: 'Inter', sans-serif;
-}
-
-#topbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+.box h2 {
+    color: #ffffff;
+    background: #2c80da;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 700;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     text-align: center;
 }
 
-#topbar ul li {
-    display: inline;
-    margin-left: 70px;
+.box ul {
+    position: relative;
+    background: #ffffff85;
 }
 
-#topbar ul li a {
-    text-decoration: none;
-    color: #000;
-    margin-left: 50px;
+.box ul:hover li {
+    opacity: 0.2;
 }
 
-.highlighted-item {
-    background-color: #fff;
-}
-
-.highlighted-item:hover {
-    background-color: #fff;
-    border-color: #fff;
-}
-
-#content {
-    margin-left: 280px;
-    padding: 20px;
-    font-family: 'Inter', sans-serif;
-}
-
-.material-symbols-outlined {
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 24;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-
-#sidebar ul li a {
-    color: #585858;
-    text-decoration: none;
-    display: block;
-    padding: 10px 20px;
-    border-bottom: 1px solid transparent;
-}
-
-#sidebar ul li a:hover {
-    background-color: #cccc;
-    border-color: #cccc;
-}
-
-.fixed-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 200px;
-}
-
-.fixed-button button {
-    width: 100%;
+.box ul li {
+    list-style: none;
     padding: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 15px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
 }
 
-.fixed-button button:hover {
-    background-color: #45a049;
+.box ul li:hover {
+    transform: scale(1.1);
+    z-index: 5;
+    background: #2c80da;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    opacity: 1;
+}
+
+.box ul li span {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background: #2c80da;
+    color: #ffffff;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 12px;
+    font-weight: 600;
+    transform: translateY(-2px);
+}
+
+.box ul li:hover span {
+    background: #fff;
+    color: #2c80da;
 }

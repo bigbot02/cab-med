@@ -1,151 +1,186 @@
-<div class="logo-container">
-    <img src="assets\image.png" alt="Logo">
+<div id="container">
+    <div id="logo">
+        <a href="">
+            <img class="logo-img" src="assets/Logoo.png" alt="Logo du cabinet">
+        </a>
+    </div>
+
+    <div id="links">
+        <a class="link" href="#">Acceuil</a>
+        <div class="link">Cabinet</div>
+        <div class="link">Equipe</div>
+        <div class="link">Contact</div>
+        <a class="link" routerLink="/rdv">Prendre un rendez-vous</a>
+        <div>|</div>
+        <div routerLink="/login" style="cursor: pointer;">Se connecter</div>
+    </div>
 </div>
 
-<form class="medical-form">
-    <div>
-        <label for="title" class="required">Title</label>
-        <select id="title" name="title" required>
-            <option value="mr">Mr.</option>
-            <option value="ms">Ms.</option>
-            <option value="mrs">Mrs.</option>
-        </select>
-    </div>
+<body>
+    <div class="background-image"></div>
 
-    <div>
-        <label for="firstName" class="required">First Name</label>
-        <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+    <div class="form-container">
+        <div class="all">
+            <div class="logo_container">
+                <img src="assets/m2.png" alt="Logo"
+                    style="width: 100%; height: 100%; object-fit: cover; border-radius: 11px;">
+            </div>
+            <div class="title_container">
+                <p class="title">Créer un nouveau compte</p>
+                <span class="subtitle">Commencez avec notre application, créez simplement un compte et profitez de
+                    l'expérience.</span>
+            </div>
+        </div>
+        <br>
+        <form class="medical-form" (ngSubmit)="registerUser()">
+            <div>
+                <label for="title" class="required">Titre</label>
+                <select id="title" name="title" [(ngModel)]="formData.title" required>
+                    <option value="mr">M.</option>
+                    <option value="ms">Mlle.</option>
+                    <option value="mrs">Mme.</option>
+                </select>
+            </div>
+            <div>
+                <label for="firstName" class="required">Prénom</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Entrer votre prénom"
+                    [(ngModel)]="formData.firstName" required>
+            </div>
+            <div>
+                <label for="lastName" class="required">Nom de famille</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Entrez votre nom de famille"
+                    [(ngModel)]="formData.lastName" required>
+            </div>
+            <div>
+                <label class="required">Nom d'utilisateur</label>
+                <input type="text" name="username" placeholder="Entrez un nom d'utilisateur unique"
+                    [(ngModel)]="formData.username" required>
+            </div>
+            <div>
+                <label for="email" class="required">Email</label>
+                <input type="email" id="email" name="email" placeholder="e.g, exemple@exp.com"
+                    [(ngModel)]="formData.email" required>
+            </div>
+            <div>
+                <label for="cin" class="required">CIN</label>
+                <input type="text" id="cin" name="cin" placeholder="e.g, A00000" [(ngModel)]="formData.cin" required>
+            </div>
+            <div>
+                <label for="profession" class="required">Je suis</label>
+                <select id="profession" name="profession" [(ngModel)]="formData.profession"
+                    (change)="toggleFields($event)" required>
+                    <option value="doctor">Médecin</option>
+                    <option value="patient">Patient</option>
+                </select>
+            </div>
+            <div id="doctorFields" class="hidden">
+                <label class="required">Numéro de licence médicale</label>
+                <input type="text" name="licenseNumber" placeholder="e.g, 12345-ABCDE"
+                    [(ngModel)]="formData.licenseNumber">
+                <label class="required">Spécialisation</label>
+                <select name="specialization" [(ngModel)]="formData.specialization">
+                    <option value="cardiology">Cardiologie</option>
+                    <option value="dermatology">Dermatologie</option>
+                    <option value="endocrinology">Endocrinologie</option>
+                    <option value="gastroenterology">Gastro-entérologie</option>
+                    <option value="neurology">Neurologie</option>
+                    <option value="oncology">Oncologie</option>
+                    <option value="orthopedics">Orthopédie</option>
+                    <option value="pediatrics">Pédiatrie</option>
+                    <option value="psychiatry">Psychiatrie</option>
+                    <option value="radiology">Radiologie</option>
+                    <option value="surgery">Chirurgie</option>
+                    <option value="obstetrics_and_gynecology">Obstétrique et gynécologie</option>
+                    <option value="urology">Urologie</option>
+                    <option value="anesthesiology">Anesthésiologie</option>
+                    <option value="ophthalmology">Ophtalmologie</option>
+                    <option value="allergy_and_immunology">Allergie et immunologie</option>
+                    <option value="pulmonology">Pneumologie</option>
+                    <option value="nephrology">Néphrologie</option>
+                    <option value="rheumatology">Rhumatologie</option>
+                    <option value="emergency_medicine">Médecine d'urgence</option>
+                </select>
+                <label class="required">Années d'expérience</label>
+                <input type="number" name="experience" placeholder="e.g, 10" [(ngModel)]="formData.experience">
+            </div>
+            <div id="patientFields" class="hidden">
+                <label class="required">Information sur l'assurance</label>
+                <input type="text" name="insuranceInfo" [(ngModel)]="formData.insuranceInfo">
+                <label class="required">Médecin traitant</label>
+                <input type="text" name="primaryPhysician" [(ngModel)]="formData.primaryPhysician">
+                <label class="required">Antécédents médicaux</label>
+                <textarea name="medicalHistory" [(ngModel)]="formData.medicalHistory"></textarea>
+            </div>
+            <div>
+                <label for="city" class="required">Ville</label>
+                <select id="city" name="city" [(ngModel)]="formData.city">
+                    <option value="Agadir">Agadir</option>
+                    <option value="Al Hoceima">Al Hoceima</option>
+                    <option value="Asilah">Asilah</option>
+                    <option value="Azemmour">Azemmour</option>
+                    <option value="Beni Mellal">Beni Mellal</option>
+                    <option value="Berkane">Berkane</option>
+                    <option value="Berrechid">Berrechid</option>
+                    <option value="Casablanca">Casablanca</option>
+                    <option value="Chefchaouen">Chefchaouen</option>
+                    <option value="Dakhla">Dakhla</option>
+                    <option value="El Jadida">El Jadida</option>
+                    <option value="Essaouira">Essaouira</option>
+                    <option value="Fes">Fès</option>
+                    <option value="Fnideq">Fnideq</option>
+                    <option value="Guelmim">Guelmim</option>
+                    <option value="Ifrane">Ifrane</option>
+                    <option value="Kénitra">Kénitra</option>
+                    <option value="Khouribga">Khouribga</option>
+                    <option value="Ksar El Kebir">Ksar El Kebir</option>
+                    <option value="Laayoune">Laayoune</option>
+                    <option value="Larache">Larache</option>
+                    <option value="Marrakech">Marrakech</option>
+                    <option value="Meknes">Meknès</option>
+                    <option value="Mohammedia">Mohammédia</option>
+                    <option value="Nador">Nador</option>
+                    <option value="Ouarzazate">Ouarzazate</option>
+                    <option value="Oujda">Oujda</option>
+                    <option value="Rabat">Rabat</option>
+                    <option value="Safi">Safi</option>
+                    <option value="Salé">Salé</option>
+                    <option value="Settat">Settat</option>
+                    <option value="Sidi Kacem">Sidi Kacem</option>
+                    <option value="Tangier">Tanger</option>
+                    <option value="Taza">Taza</option>
+                    <option value="Témara">Témara</option>
+                    <option value="Tétouan">Tétouan</option>
+                    <option value="Tiznit">Tiznit</option>
+                    <option value="Zagora">Zagora</option>
+                </select>
+            </div>
+            <div>
+                <label for="password" class="required">Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="Entrer un fort mot de passe"
+                    [(ngModel)]="formData.password" required>
+            </div>
+            <div>
+                <label for="confirmPassword" class="required">Confirmer le mot de passe</label>
+                <input type="password" id="confirmPassword" name="confirmPassword"
+                    placeholder="Re-entrer votre mot de passe" [(ngModel)]="formData.confirmPassword" required>
+            </div>
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" id="acceptTerms" name="acceptTerms" [(ngModel)]="formData.acceptTerms"
+                        required>
+                    <label for="acceptTerms" class="required1">Je suis d'accord avec les conditions
+                        d'utilisation.</label>
+                </label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="policy" name="policy" [(ngModel)]="formData.policy" required>
+                <label for="policy" class="required1">J'accepte la politique de confidentialité.</label>
+            </div>
+            <button type="submit" class="sign-in_btn">S'inscrire</button>
+        </form>
     </div>
-    <div>
-        <label for="lastName" class="required">Last Name</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
-    </div>
-    <div>
-        <label class="required">Username</label>
-        <input type="text" name="username" placeholder="Enter an unique username" required>
-    </div>
-    <div>
-        <label for="email" class="required">Email</label>
-        <input type="email" id="email" name="email" placeholder="e.g., example@exp.com" required>
-    </div>
-    <div>
-        <label for="cin" class="required">CIN</label>
-        <input type="cin" id="cin" name="cin" placeholder="e.g., A00000" required>
-    </div>
-    <div>
-        <label for="profession" class="required">I am a</label>
-        <select required id="profession" (change)="toggleFields($event)">
-            <option value="none">--</option>
-            <option value="doctor">Doctor</option>
-            <option value="patient">Patient</option>
-        </select>
-    </div>
-    <div id="doctorFields" class="hidden">
-        <label class="required">Medical License Number</label>
-        <input type="text" name="licenseNumber" placeholder="e.g., 12345-ABCDE" required>
-
-        <label class="required">Specialization</label>
-        <select type="text" name="specialization" required>
-            <option value="cardiology">Cardiology</option>
-            <option value="dermatology">Dermatology</option>
-            <option value="endocrinology">Endocrinology</option>
-            <option value="gastroenterology">Gastroenterology</option>
-            <option value="neurology">Neurology</option>
-            <option value="oncology">Oncology</option>
-            <option value="orthopedics">Orthopedics</option>
-            <option value="pediatrics">Pediatrics</option>
-            <option value="psychiatry">Psychiatry</option>
-            <option value="radiology">Radiology</option>
-            <option value="surgery">Surgery</option>
-            <option value="obstetrics_and_gynecology">Obstetrics and Gynecology</option>
-            <option value="urology">Urology</option>
-            <option value="anesthesiology">Anesthesiology</option>
-            <option value="ophthalmology">Ophthalmology</option>
-            <option value="allergy_and_immunology">Allergy and Immunology</option>
-            <option value="pulmonology">Pulmonology</option>
-            <option value="nephrology">Nephrology</option>
-            <option value="rheumatology">Rheumatology</option>
-            <option value="emergency_medicine">Emergency Medicine</option>
-        </select>
-
-        <label class="required">Clinic or Hospital Affiliation</label>
-        <input type="text" name="affiliation" required>
-
-        <label class="required">Years of Experience</label>
-        <input type="number" name="experience" placeholder="e.g., 10" required>
-    </div>
-
-    <div id="patientFields" class="hidden">
-        <label class="required">Insurance Information</label>
-        <input type="text" name="insuranceInfo">
-
-        <label class="required">Primary Care Physician</label>
-        <input type="text" name="primaryPhysician">
-
-        <label class="required">Medical History</label>
-        <textarea name="medicalHistory"></textarea>
-    </div>
-    <div>
-        <label for="city" class="required">City</label>
-        <select type="text" id="city" name="city">
-            <option value="Agadir">Agadir</option>
-            <option value="Al Hoceima">Al Hoceima</option>
-            <option value="Asilah">Asilah</option>
-            <option value="Azemmour">Azemmour</option>
-            <option value="Beni Mellal">Beni Mellal</option>
-            <option value="Berkane">Berkane</option>
-            <option value="Berrechid">Berrechid</option>
-            <option value="Casablanca">Casablanca</option>
-            <option value="Chefchaouen">Chefchaouen</option>
-            <option value="Dakhla">Dakhla</option>
-            <option value="El Jadida">El Jadida</option>
-            <option value="Essaouira">Essaouira</option>
-            <option value="Fes">Fes</option>
-            <option value="Fnideq">Fnideq</option>
-            <option value="Guelmim">Guelmim</option>
-            <option value="Ifrane">Ifrane</option>
-            <option value="Kénitra">Kénitra</option>
-            <option value="Khouribga">Khouribga</option>
-            <option value="Ksar El Kebir">Ksar El Kebir</option>
-            <option value="Laayoune">Laayoune</option>
-            <option value="Larache">Larache</option>
-            <option value="Marrakech">Marrakech</option>
-            <option value="Meknes">Meknes</option>
-            <option value="Mohammedia">Mohammedia</option>
-            <option value="Nador">Nador</option>
-            <option value="Ouarzazate">Ouarzazate</option>
-            <option value="Oujda">Oujda</option>
-            <option value="Rabat">Rabat</option>
-            <option value="Safi">Safi</option>
-            <option value="Salé">Salé</option>
-            <option value="Settat">Settat</option>
-            <option value="Sidi Kacem">Sidi Kacem</option>
-            <option value="Tangier">Tangier</option>
-            <option value="Taza">Taza</option>
-            <option value="Témara">Témara</option>
-            <option value="Tétouan">Tétouan</option>
-            <option value="Tiznit">Tiznit</option>
-            <option value="Zagora">Zagora</option>
-        </select>
-    </div>
-    <div>
-        <label for="password" class="required">Password</label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <div>
-        <label for="confirmPassword" class="required">Confirm Password</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" required>
-    </div>
-    <div>
-        <label>
-            <input type="checkbox" id="acceptTerms" name="acceptTerms" required>
-            <label for="acceptTerms" class="required1">I agree to the Terms of Service.</label>
-        </label>
-    </div>
-    <div>
-        <input type="checkbox" id="policy" name="policy" required>
-        <label for="acceptTerms" class="required1">I accept the Privacy Policy.</label>
-    </div>
-    <button type="submit" routerLink="/login">Register</button>
-    <button type="cancel" routerLink="/login">Cancel</button>
-</form>
+</body>
+<footer>
+    <p>&copy; 2024 Cabinet médical DocConnect. Tous droits réservés.</p>
+    <p>Conçu et développé par ABID Safae</p>
+</footer>

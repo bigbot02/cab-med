@@ -1,18 +1,17 @@
-import { Component, ElementRef } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.css']
 })
-export class WelcomeComponent {
-  constructor(private elementRef: ElementRef) { }
+export class WelcomeComponent implements OnInit {
+  currentDate: string | null = null;
 
-  scrollTo(section: string) {
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+  ngOnInit() {
+    // Get the current date
+    const currentDateObj = new Date();
+    // Convert the date to a string format
+    this.currentDate = currentDateObj.toDateString();
   }
 }

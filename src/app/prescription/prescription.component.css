@@ -1,0 +1,98 @@
+body {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    color: #000000;
+    font-weight: 500;
+    /*background-color: #37CDFF;*/
+    background-image: url('https://img.freepik.com/free-photo/flat-lay-medical-desk-arrangement-with-copy-space_23-2148502980.jpg?t=st=1718032187~exp=1718035787~hmac=5743a6b5a336940819b0b2e1a9b4df2ced141f7289f70c726bc15f43059c4fec&w=740');
+    background-size: cover;
+    background-position: center;
+    height: 1400px;
+}
+
+.wrapper {
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+    background: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.prescription-form {
+    text-align: left;
+}
+
+.image {
+    display: block;
+    margin: 0 auto 20px;
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group0 {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.form-group0 input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100px;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #555;
+}
+
+footer p {
+    margin: 5px 0;
+}

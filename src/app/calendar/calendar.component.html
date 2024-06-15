@@ -1,0 +1,440 @@
+<app-layout></app-layout>
+
+<body>
+    <!--
+    <div>
+        <label for="week">Select Week:</label>
+        <select id="week">
+        </select>
+
+        <label for="month">Select Month:</label>
+        <select id="month">
+            <option value="January">January</option>
+        </select>
+
+        <label for="year">Select Year:</label>
+        <input type="number" id="year" min="2022" max="2025" value="2024">
+    </div>
+
+    <table id="time-table">
+        <thead>
+            <tr>
+                <th>Jours</th>
+                <th>9:00 - 9:30</th>
+                <th>9:30 - 10:00</th>
+                <th>10:00 - 10:30</th>
+                <th>10:30 - 11:00</th>
+                <th>11:00 - 11:30</th>
+                <th>11:30 - 12:00</th>
+                <th>12:00 - 12:30</th>
+                <th>12:30 - 13:00</th>
+                <th>13:00 - 13:30</th>
+                <th>13:30 - 14:30</th>
+                <th>14:30 - 15:00</th>
+                <th>15:30 - 16:00</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Lundi</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Mardi</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Mercredi</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Jeudi</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Vendredi</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Samedi</td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+                <td><input type="checkbox"></td>
+            </tr>
+        </tbody>
+    </table>-->
+    <div class="container">
+        <h2>Ajouter un nouveau rendez-vous</h2>
+        <h5>Veuillez remplir le formulaire suivant, puis choisissez le créneau horaire du rendez-vous.</h5>
+
+        <form id="info-form" class="wrapper">
+            <div class="input-group">
+                <label for="name">Nom du patient:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="phone">Numéro de Téléphone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="input-group">
+                <label for="date">Date:</label>
+                <input type="week" id="date" name="date" required>
+            </div>
+        </form>
+        <table id="time-table">
+            <thead>
+                <tr>
+                    <th>Heure</th>
+                    <th class="lundi">Lundi</th>
+                    <th class="mardi">Mardi</th>
+                    <th class="mercredi">Mercredi</th>
+                    <th class="jeudi">Jeudi</th>
+                    <th class="vendredi">Vendredi</th>
+                    <th class="samedi">Samedi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>9:00 - 9:30</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                </tr>
+                <tr>
+                    <td>9:30 - 10:00</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                </tr>
+                <tr>
+                    <td>10:00 - 10:30</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                </tr>
+                <tr>
+                    <td>10:30 - 11:00</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                </tr>
+                <tr>
+                    <td>11:00 - 11:30</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                </tr>
+                <tr>
+                    <td>11:30 - 12:00</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                </tr>
+                <tr>
+                    <td>12:00 - 12:30</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                </tr>
+                <tr>
+                    <td>12:30 - 13:00</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"></td>
+                </tr>
+                <tr>
+                    <td>13:00 - 13:30</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"></td>
+
+                </tr>
+                <tr>
+                    <td>13:30 - 14:00</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"></td>
+
+                </tr>
+                <tr>
+                    <td>14:00 - 14:30</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"></td>
+
+                </tr>
+                <tr>
+                    <td>14:30 - 15:00</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"></td>
+
+                </tr>
+                <tr>
+                    <td>15:00 - 15:30</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"></td>
+
+                </tr>
+                <tr>
+                    <td>15:30 - 16:00</td>
+                    <td class="lundi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mardi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="mercredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="jeudi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label>
+                    </td>
+                    <td class="vendredi"><label class="checkbox"><input type="checkbox"><span
+                                class="checkmark"></span></label></td>
+                    <td class="samedi"></td>
+
+                </tr>
+            </tbody>
+        </table>
+        <div class="button-group">
+            <button>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+                    </svg> Ajouter
+                </span>
+            </button>
+            <button class="cancel-button">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+                    </svg> Annuler
+                </span>
+            </button>
+        </div>
+    </div>
+</body>

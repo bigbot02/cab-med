@@ -1,0 +1,156 @@
+body {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+    background-color: #37CDFF;
+    /*background-image: url('https://img.freepik.com/free-photo/flat-lay-medical-desk-arrangement-with-copy-space_23-2148502980.jpg?t=st=1718032187~exp=1718035787~hmac=5743a6b5a336940819b0b2e1a9b4df2ced141f7289f70c726bc15f43059c4fec&w=740');
+    background-size: cover;
+    background-position: center;*/
+    height: 1090px;
+}
+
+.guide-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-left: 90px;
+    color: black;
+    width: 1100px;
+    height: 700px;
+    border-radius: 20px;
+    transition: all .3s;
+    margin-left: 300px;
+    margin-top: 10px;
+}
+
+.guide-container img {
+    width: 900px;
+}
+
+.guide-container p {
+    font-size: 30px;
+    font-weight: lighter;
+    margin-bottom: 20px;
+    color: #202020;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #202020;
+    margin-left: 520px;
+    margin-top: 40px;
+}
+
+
+button {
+    display: inline-flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5em 1em;
+    background-color: yellow;
+    cursor: pointer;
+    box-shadow: 4px 6px 0px black;
+    border: 4px solid;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 100;
+    transition: box-shadow 250ms, transform 250ms, filter 50ms;
+    height: 3em;
+    margin-left: 20px;
+    font-weight: lighter;
+}
+
+button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 3px 0px black;
+}
+
+button:active {
+    filter: saturate(0.75);
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: pink;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: transform 250ms;
+}
+
+button:hover::after {
+    transform: translateX(0);
+}
+
+
+.bgContainer {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow: hidden;
+    max-width: 30%;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.bgContainer span {
+    position: relative;
+    transform: translateX(-100%);
+    transition: all 250ms;
+}
+
+.button:hover .bgContainer>span {
+    transform: translateX(0);
+}
+
+.arrowContainer {
+    padding: 10px;
+    margin-inline-end: 1em;
+    border: 4px solid;
+    border-radius: 50%;
+    background-color: pink;
+    position: relative;
+    overflow: hidden;
+    transition: transform 250ms, background-color 250ms;
+    z-index: 100;
+}
+
+.arrowContainer::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background-color: yellow;
+    transform: translateX(-100%);
+    z-index: -1;
+    transition: transform 250ms ease-in-out;
+}
+
+button:hover .arrowContainer::after {
+    transform: translateX(0);
+}
+
+button:hover .arrowContainer {
+    transform: translateX(5px);
+}
+
+button:active .arrowContainer {
+    transform: translateX(8px);
+}
+
+.arrowContainer svg {
+    vertical-align: middle;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    margin-left: 260px;
+}

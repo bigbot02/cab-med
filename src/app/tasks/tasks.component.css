@@ -1,0 +1,119 @@
+body {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+    /*background-color: #37CDFF;*/
+    background-image: url('https://img.freepik.com/free-photo/flat-lay-medical-desk-arrangement-with-copy-space_23-2148502980.jpg?t=st=1718032187~exp=1718035787~hmac=5743a6b5a336940819b0b2e1a9b4df2ced141f7289f70c726bc15f43059c4fec&w=740');
+    background-size: cover;
+    background-position: center;
+    height: 1090px;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #202020;
+    text-align: center;
+}
+
+.container {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.form {
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    flex: 1;
+    width: 350px;
+}
+
+.input:focus,
+.add:focus {
+    outline: none;
+}
+
+.add {
+    border: none;
+    background-color: rgb(54, 102, 247);
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: 'Titillium Web';
+
+}
+
+.tasks {
+    background-color: #eee;
+    margin-top: 20px;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+.tasks .task {
+    background-color: white;
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.tasks .task:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.tasks .task:hover {
+    background-color: #f7f7f7;
+}
+
+.tasks .task.done {
+    opacity: 0.5;
+    position: relative;
+}
+
+.task.done::after {
+    position: absolute;
+    content: "";
+}
+
+.tasks .task span {
+    font-weight: bold;
+    font-size: 10px;
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-all {
+    width: calc(100% - 25px);
+    margin: auto;
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    background-color: #f44336;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-family: 'Titillium Web';
+
+}

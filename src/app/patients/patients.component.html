@@ -1,0 +1,101 @@
+<body>
+    <app-layout></app-layout>
+    <div class="space">
+        <div class="wrapper">
+            <div class="prescription-form">
+                <div>
+                    <img src="assets/1-removebg-preview.png" alt="pageimage" class="image">
+                </div>
+                <h2> <span class="dos">DOSSIER MÉDICAL PERSONNEL</span> </h2>
+                <form *ngIf="isEditMode; else displayMode" (ngSubmit)="onSubmit(form)" #form="ngForm">
+                    <div class="form-group">
+                        <label for="patientName">NOM DU PATIENT</label>
+                        <input type="text" id="patientName" name="patientName" placeholder="Entrer votre nom" ngModel
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAge">ÂGE DU PATIENT</label>
+                        <input type="number" id="patientAge" name="patientAge" placeholder="Entrer votre l'âge" ngModel
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <label for="patientSexe">SEXE</label>
+                        <select id="patientSexe" name="patientSexe" ngModel required>
+                            <option value="male">Homme</option>
+                            <option value="female">Femme</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="grpSanguin">GROUPE SANGUIN</label>
+                        <select id="grpSanguin" name="grpSanguin" ngModel required>
+                            <option value="O-">O -</option>
+                            <option value="O+">O +</option>
+                            <option value="B-">B -</option>
+                            <option value="B+">B +</option>
+                            <option value="A-">A -</option>
+                            <option value="A+">A +</option>
+                            <option value="AB+">AB +</option>
+                            <option value="AB-">AB -</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="assurance">COUVERTURE MÉDICALE</label>
+                        <select id="assurance" name="assurance" ngModel required>
+                            <option value="CNOPS">CNOPS</option>
+                            <option value="CNSS">CNSS</option>
+                            <option value="AMO">AMO</option>
+                            <option value="Autre">Autre</option>
+                        </select>
+                        <textarea id="autreAssurance" name="autreAssurance" ngModel class="hide"
+                            placeholder="Entrer votre couverture médicale"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="conditions">MALADIES CHRONIQUES</label>
+                        <textarea id="conditions" name="conditions" ngModel
+                            placeholder="Par exemple, diabète, hypertension, asthme"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="chirurgie">ANTÉCÉDENTS CHIRURGICAUX</label>
+                        <textarea id="chirurgie" name="chirurgie" ngModel
+                            placeholder="Veuillez saisir toutes vos chirurgies antérieures, le cas échéant"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="medicament">MÉDICAMENTS</label>
+                        <textarea id="medicament" name="medicament" ngModel
+                            placeholder="Veuillez indiquer tous les médicaments que vous prenez actuellement"></textarea>
+                    </div>
+                    <button class="addnew">Ajouter une ordonnances</button>
+
+                    <div class="form-group">
+                        <input type="checkbox" id="certification" name="certification" ngModel required />
+                        <label for="certification">Je certifie que les informations ci-dessus sont vraies et
+                            exactes.</label>
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+
+                <ng-template #displayMode>
+                    <div *ngIf="formData">
+                        <h3>Submitted Information</h3>
+                        <p><strong>NOM DU PATIENT:</strong> {{ formData.patientName }}</p>
+                        <p><strong>ÂGE DU PATIENT:</strong> {{ formData.patientAge }}</p>
+                        <p><strong>SEXE:</strong> {{ formData.patientSexe }}</p>
+                        <p><strong>GROUPE SANGUIN:</strong> {{ formData.grpSanguin }}</p>
+                        <p><strong>COUVERTURE MÉDICALE:</strong> {{ formData.assurance }}</p>
+                        <p><strong>MALADIES CHRONIQUES:</strong> {{ formData.conditions }}</p>
+                        <p><strong>ANTÉCÉDENTS CHIRURGICAUX:</strong> {{ formData.chirurgie }}</p>
+                        <p><strong>MÉDICAMENTS:</strong> {{ formData.medicament }}</p>
+                        <p><strong>CERTIFICATION:</strong> {{ formData.certification ? 'Oui' : 'Non' }}</p>
+                        <button (click)="editForm()">Edit</button>
+                    </div>
+                </ng-template>
+
+                <footer>
+                    <p>Cabinet Medical DocConnect</p>
+                    <p>Numéro de telephone : +212 543218978</p>
+                    <p>Adresse : Rue Annakhil Étage 5, Oujda</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>

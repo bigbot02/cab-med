@@ -1,100 +1,454 @@
-.profile-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: 'Inter', sans-serif;
+/*
+body {
+    font-family: 'DM', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3194b838;
 }
 
-.profile-info {
-    display: block;
-    margin-top: 10px;
+header {
+    background-image: url('https://images.unsplash.com/photo-1528460033278-a6ba57020470?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8ODh8fG1lZGljYWwlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fHww');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 3px 5px rgba(0.12, 0.12, 0.12, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+    background-image: linear-gradient(to left, #ff0000, #b46d6d);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin-bottom: 50px;
+    font-family: 'DM', sans-serif;
+}
+
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .profile-picture {
-    margin-right: 20px;
-}
-
-.profile-picture img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    margin: 0 auto 20px;
+    display: block;
+    background-color: #ccc;
 }
 
-.profile-details {
-    margin-top: 10px;
+.personal-info {
+    margin-bottom: 20px;
 }
 
-.profile-name {
-    font-size: 15px;
-    color: #000000;
-    margin-bottom: 5px;
-}
-
-.profile-email {
-    font-size: 15px;
-    color: #000000;
-}
-
-h3 {
-    color: #d12828;
-    text-align: center;
-    font-size: 30px;
-}
-
-.profile-settings {
-    flex: 1;
-    margin-left: 20px;
-    font-size: 20px;
-}
-
-.profile-label {
-    margin-bottom: 50px;
-    color: #3b7dd8;
-}
-
-.form-control {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 8px;
-    width: 100%;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-}
-
-.save {
-    width: 10%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-.save:hover {
-    background-color: #0056b3;
-}
-
-.return {
-    width: 10%;
-    padding: 10px;
-    background-color: #d34949;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
+label {
+    font-weight: bold;
     margin-left: 10px;
 }
 
-.return:hover {
-    background-color: #f12b2b;
+p {
+    margin-left: 10px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.activity {
+    margin-bottom: 20px;
+}
+
+.activity h2 {
+    margin-bottom: 10px;
+}
+
+.delete {
+    padding: 9px 20px;
+    background-color: #b46d6d7a;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-left: 10px;
+    font-family: 'DM', sans-serif;
+}
+
+.delete:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.retour {
+    padding: 9px 20px;
+    background-color: rgba(5, 5, 5, 0.226);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-left: 10px;
+    font-family: 'DM', sans-serif;
+    text-decoration: none;
+}
+
+.retour:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.actions {
+    margin-left: 350px;
+    margin-top: 75px;
+}
+
+div>label,
+div>input {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.element-item {
+    background-color: #3194b838;
+    padding: 10px;
+    height: 200px;
+    width: 700px;
+    margin-left: 45px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 300ms;
+    position: relative;
+    z-index: 1;
+}
+
+.element-item input {
+    width: 270px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.element-item1 {
+    background-color: #3194b838;
+    padding: 10px;
+    height: 270px;
+    width: 700px;
+    margin-left: 45px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 300ms;
+    position: relative;
+    z-index: 1;
+}
+
+.element-item1 input {
+    width: 270px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.alone {
+    height: 150px;
+}
+
+.table-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.table-cell {
+    flex: 1;
+    margin-right: 10px;
+}
+
+label {
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.save {
+    padding: 9px 30px;
+    background-color: rgba(101, 155, 165, 0.384);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-left: 10px;
+    font-family: 'DM', sans-serif;
+}
+
+.save:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.cancel {
+    padding: 9px 20px;
+    background-color: #b46d6d7a;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    margin-left: 10px;
+    font-family: 'DM', sans-serif;
+}
+
+.cancel:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.btn {
+    margin-top: 70px;
+    margin-left: 70px;
+}
+
+.btn1 {
+    margin-top: 10px;
+    margin-left: 70px;
+}
+
+.btn2 {
+    margin-top: 19px;
+    margin-left: 70px;
+}
+
+.btn3 {
+    margin-top: 30px;
+    margin-left: 70px;
+}
+
+*/
+
+
+body {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+    font-weight: 500;
+    background-size: cover;
+    background-position: center;
+    background-image: url('https://img.freepik.com/free-photo/flat-lay-medical-desk-arrangement-with-copy-space_23-2148502980.jpg?t=st=1718032187~exp=1718035787~hmac=5743a6b5a336940819b0b2e1a9b4df2ced141f7289f70c726bc15f43059c4fec&w=740');
+    height: 1350px;
+    padding: 50px;
+}
+
+
+.profile-container {
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.678);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: black;
+    font-family: "Inter", sans-serif;
+    margin-left: 90px;
+}
+
+.profile-header {
+    position: relative;
+    text-align: center;
+    padding: 40px 20px 20px;
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.header-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 230px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.header-background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-picture {
+    position: absolute;
+    top: 170px;
+    left: 10%;
+    transform: translateX(-50%);
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    z-index: 1;
+}
+
+.profile-name {
+    margin-top: 280px;
+    font-size: 2em;
+    color: #3498db;
+    margin-left: 30px;
+}
+
+.profile-title {
+    font-size: 1.2em;
+    color: #000000;
+    margin: 0;
+}
+
+.profile-details {
+    padding: 20px;
+    margin-top: 300px;
+    font-family: "Inter", sans-serif;
+}
+
+.profile-details h2 {
+    color: #3498db;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.profile-details p,
+.profile-details ul {
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+.profile-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.profile-details li {
+    margin-bottom: 10px;
+}
+
+.profile-actions {
+    margin-top: 20px;
+    margin-left: 550px;
+}
+
+.profile-actions .btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.profile-actions .btn:hover {
+    background-color: #2980b9;
+}
+
+.profile-actions .edit-btn {
+    background-color: #3498db;
+}
+
+.profile-actions .delete-btn {
+    background-color: #e74c3c;
+}
+
+.profile-actions .delete-btn:hover {
+    background-color: #c0392b;
+}
+
+.profile-actions .home-btn {
+    background-color: #2c3e50;
+    text-decoration: none;
+    color: white;
+}
+
+.profile-actions .home-btn:hover {
+    background-color: #2c3e50;
+}
+
+
+.element-item {
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+.element-item.alone {
+    margin-bottom: 30px;
+}
+
+.table-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.table-cell {
+    flex: 1;
+}
+
+.table-cell label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.table-cell input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+}
+
+.element-item1 {
+    margin-top: 20px;
+}
+
+.element-item1 .table-row {
+    margin-bottom: 10px;
+}
+
+.element-item1 .table-cell:last-child {
+    margin-left: 10px;
+}
+
+.element-item1 .table-cell input[type="text"] {
+    width: calc(100% - 10px);
+}
+
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    vertical-align: middle;
+    margin-right: 10px;
 }
